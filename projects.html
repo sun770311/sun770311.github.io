@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Hannah Sun</title>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc; /* Off-white/beige background */
+            color: #4e3c24;
+        }
+        .navbar {
+            background-color: #f5f5dc; /* Same off-white/beige background */
+            overflow: hidden;
+            border-bottom: 2px solid #f5f5dc;
+            padding: 10px 0;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #4e3c24;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: #231a10;
+        }
+        .navbar a.active {
+            color: #231a10;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            margin-bottom: 5px;
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 2.5em;
+            font-weight: normal;
+            margin-top: 0;
+        }
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .project {
+            position: relative;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(50% - 10px); /* Adjust width for 2x2 layout */
+            height: 400px; /* Set height */
+            box-sizing: border-box;
+            padding: 0;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .project img {
+            width: 100%;
+            height: 100%; /* Match the height of the project box */
+            object-fit: cover; /* Ensure the image covers the area */
+            border-radius: 8px 8px 0 0;
+        }
+        .project:hover {
+            transform: scale(1.05);
+        }
+        .project .description {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .project:hover .description {
+            opacity: 1;
+        }
+        .project h2 {
+            font-size: 1.0em;
+            margin-top: 0;
+        }
+        .project p {
+            font-size: 0.8em;
+            line-height: 1.6;
+        }
+        .project a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="art.html">Art</a>
+        <a href="cv.html">CV/Resume</a>
+    </div>
+    <div class="content">
+        <h1>🛠️ My Projects</h1>
+        <div class="projects-container">
+            <div class="project">
+                <img src="PothoAI.jpeg" alt="Project 1 Image">
+                <a href="https://pothoai.com/" target="_blank" class="description">
+                    <h2>PothoAI</h2>
+                    <p>AI-powered chat</p>
+                </a>
+            </div>
+            <div class="project">
+                <img src="FinSense.jpg" alt="Project 2 Image">
+                <a href="https://github.com/sun770311/FinSense/tree/main" target="_blank" class="description">
+                    <h2>FinSense</h2>
+                    <p>Financial analysis and recommendation system</p>
+                </a>
+            </div>
+            <div class="project">
+                <img src="scLLM.jpg" alt="Project 3 Image">
+                <a href="https://github.com/sun770311/scLLM-pretrain" target="_blank" class="description">
+                    <h2>scLLM-pretrain</h2>
+                    <p>Pretraining step for scGPT</p>
+                </a>
+            </div>
+            <div class="project">
+                <img src="LLMTeam.jpg" alt="Project 4 Image">
+                <a href="https://github.com/sun770311/LLMTeam" target="_blank" class="description">
+                    <h2>LLMTeam</h2>
+                    <p>Multi-agent group chat based on LangGraph</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
