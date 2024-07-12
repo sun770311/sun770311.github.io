@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art</title>
+    <title>Art - Hannah Sun</title>
     <style>
         body {
             font-family: Roboto, sans-serif;
@@ -37,7 +37,7 @@
         }
         .content {
             padding: 20px;
-            max-width: 800px;
+            max-width: 1200px;
             margin: 20px auto;
             border-radius: 8px;
         }
@@ -46,9 +46,17 @@
             font-weight: normal;
             margin-top: 0;
         }
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+        .project img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
@@ -60,8 +68,27 @@
         <a href="cv.html">CV/Resume</a>
     </div>
     <div class="content">
-        <h1>Art</h1>
-        <p>This page will showcase my art projects.</p>
+        <h1>🎨 More Coming Soon</h1>
+        <div class="projects-container">
+            <div class="project">
+                <img src="art1.jpg" alt="Art Project 1">
+            </div>
+            <div class="project">
+                <img src="art2.jpg" alt="Art Project 2">
+            </div>
+            <div class="project">
+                <img src="art3.jpg" alt="Art Project 3">
+            </div>
+            <div class="project">
+                <img src="art4.jpg" alt="Art Project 4">
+            </div>
+            <div class="project">
+                <img src="art5.jpg" alt="Art Project 5">
+            </div>
+            <div class="project">
+                <img src="art6.jpg" alt="Art Project 6">
+            </div>
+        </div>
     </div>
 </body>
 </html>
