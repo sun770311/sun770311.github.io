@@ -9,19 +9,19 @@
             font-family: Roboto, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #162447; /* Darker grayish background */
-            color: #eaeaea; /* Light gray text */
+            background-color: #162447;
+            color: #eaeaea;
         }
         .navbar {
-            background-color: #162447; /* Same as body background */
+            background-color: #162447;
             overflow: hidden;
-            border-bottom: 2px solid #162447; /* Dark grayish blue border */
+            border-bottom: 2px solid #162447;
             padding: 10px 0;
         }
         .navbar a {
             float: left;
             display: block;
-            color: #eaeaea; /* Light gray text */
+            color: #eaeaea;
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
@@ -29,31 +29,30 @@
             transition: background-color 0.3s;
         }
         .navbar a:hover {
-            background-color: #162447; /* Slightly lighter navy blue */
-            color: #ffffff; /* White text on hover */
+            background-color: #162447;
+            color: #ffffff;
         }
         .navbar a.active {
-            color: #ffffff; /* White for active link */
+            color: #ffffff;
         }
         a {
-            color: #4fd1c5; /* Teal color for links */
-            text-decoration: underline; /* Remove underline for a cleaner look */
+            color: #4fd1c5;
+            text-decoration: underline;
         }
-
         a:hover {
-            color: #81e6d9; /* Lighter teal on hover */
-            text-decoration: underline; /* Optional: Add underline on hover for emphasis */
+            color: #81e6d9;
+            text-decoration: underline;
         }
         a:visited {
-            color: #4da3b7; /* A darker teal color for visited links */
+            color: #4da3b7;
         }
         .content {
             padding: 10px;
             font-size: 12px;
             max-width: 800px;
             margin: 10px auto;
-            margin-bottom: 10px; /* Reduced spacing between sections */
-            background-color: #162447; /* Slightly darker grayish */
+            margin-bottom: 10px;
+            background-color: #162447;
         }
         h1 {
             font-size: 2.5em;
@@ -63,16 +62,24 @@
         p {
             font-size: 1.2em;
             line-height: 1.6;
-            margin-bottom: 2px; /* Reduced margin between paragraphs */
+            margin-bottom: 2px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .project-description {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin-bottom: 8px;
+            color: #eaeaea;
             word-wrap: break-word;
             overflow-wrap: break-word;
         }
         h2 {
             font-size: 1.8em;
             font-weight: bold;
-            margin-top: 2px; /* Reduced space before heading */
-            margin-bottom: 2px; /* Reduced space after heading */
-            color: #ffffff; /* White headings */
+            margin-top: 2px;
+            margin-bottom: 2px;
+            color: #ffffff;
         }
         .slideshow {
             position: relative;
@@ -80,31 +87,24 @@
             max-width: 800px;
             margin: auto;
             overflow: hidden;
-            padding: 0; /* Remove padding to avoid spacing issues */
+            padding: 0;
         }
-
         .slides {
             display: flex;
             transition: transform 0.5s ease-in-out;
             will-change: transform;
-            position: relative; /* Ensure the slides container does not interfere with arrow positioning */
+            position: relative;
         }
-
         .slide {
             min-width: 100%;
-            height: auto; /* Allow the slide height to adjust based on content */
+            height: auto;
             box-sizing: border-box;
             padding: 20px;
             background-color: #1f4068;
-            position: relative; /* Allows for internal elements, like text, to be positioned correctly */
-            word-wrap: break-word; /* Break long words to fit within the container */
-            overflow-wrap: break-word; /* Ensures long text or URLs wrap correctly */
-            overflow: hidden; /* Prevent content from spilling outside */
-        }
-        .slide-content {
-            width: 80%; /* Set the width of the text container to 80% of the slide */
-            margin: 0 auto; /* Center the text horizontally within the slide */
-            text-align: left; /* Align the text to the left (optional, adjust as needed) */
+            position: relative;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow: hidden;
         }
         .arrows {
             position: absolute;
@@ -113,36 +113,35 @@
             display: flex;
             justify-content: space-between;
             transform: translateY(-50%);
-            pointer-events: none; /* Prevent arrow container from blocking clicks */
+            pointer-events: none;
         }
-
         .arrow {
             cursor: pointer;
-            background-color: rgba(0, 0, 0, 0.3); /* Reduced opacity for semi-transparent background */
+            background-color: rgba(0, 0, 0, 0.3);
             color: #ffffff;
             padding: 10px;
             border: none;
-            border-radius: 4px; /* Slightly rounded corners for a smoother look */
-            pointer-events: all; /* Ensure clicks are registered */
-            font-size: 1.2em; /* Larger font for better visibility */
-            opacity: 0.8; /* Set overall opacity for the button */
-            transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+            border-radius: 4px;
+            pointer-events: all;
+            font-size: 1.2em;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
         }
         .arrow#prev {
-            left: 10px; /* Fix the left arrow's position */
+            left: 10px;
         }
         .arrow#next {
-            right: 10px; /* Fix the right arrow's position */
+            right: 10px;
         }
         .arrow:hover {
-            background-color: rgba(255, 255, 255, 0.5); /* Increase opacity on hover */
+            background-color: rgba(255, 255, 255, 0.5);
             color: #000000;
-            opacity: 1; /* Full opacity on hover */
+            opacity: 1;
         }
         strong {
-            font-size: 1.2em; /* Match the font size of <p> elements */
-            font-weight: bold; /* Ensure bold text */
-            color: inherit; /* Inherit the color from the parent element */
+            font-size: 1.2em;
+            font-weight: bold;
+            color: inherit;
         }
     </style>    
 </head>
@@ -161,35 +160,36 @@
         <div class="slides">
             <div class="slide">
                 <strong>ProQuest-24: Enhancing Historical Newspaper Analysis through NLP</strong>
-                <p>Mentors: Sindhu Kutty, John Dillon, Dan Hepp</p>
-                <p>Automated newspaper article segmentation on Detroit Free Press front pages. Classified text as title, byline, or body, and filtered out visual noise. Developed automated pipeline in Python leveraging GPT-4o, OpenCV, Gaussian mixture models, and XML data. Ran on 100 front pages at half the average cost of manual segmentation, ProQuest's current strategy.</p>
-                <p><a href="https://www.linkedin.com/in/hannah-sun-5441041b7/overlay/1735497967954/single-media-viewer/?profileId=ACoAADJiGgQBzghTjn4_YPk-Rt9lfH-Y1mxkbcc">Visual Output and Evaluation Statistics</a></p>
+                <p class="project-description">Mentors: Sindhu Kutty, John Dillon, Dan Hepp</p>
+                <p class="project-description">Automated newspaper article segmentation on Detroit Free Press front pages. Classified text as title, byline, or body, and filtered out visual noise.
+                    Developed automated pipeline in Python leveraging GPT-4o, OpenCV, Gaussian mixture models, and XML data. Ran on 100 front pages at half the average cost of manual segmentation, ProQuest's current strategy.</p>
+                <p class="project-description"><a href="https://www.linkedin.com/in/hannah-sun-5441041b7/overlay/1735497967954/single-media-viewer/?profileId=ACoAADJiGgQBzghTjn4_YPk-Rt9lfH-Y1mxkbcc">Visual Output and Evaluation Statistics</a></p>
             </div>
             <div class="slide">
                 <strong>University of Michigan EECS484 Course Project, (Sep 2024 - Dec 2024):</strong>
-                <p>Fakebook database in PL/SQL, JDBC, and MongoDB</p>
+                <p class="project-description">Fakebook database in PL/SQL, JDBC, and MongoDB</p>
             </div>
             <div class="slide">
                 <strong>PothoAI, (Jun - Sep 2024):</strong>
-                <p>AutoGen chatbot workflow</p>
+                <p class="project-description">AutoGen chatbot workflow</p>
             </div>
             <div class="slide">
                 <strong>Pachira Information Technology (Hengqin) Co., Ltd - Toyota Lab, (May - Aug 2024):</strong>
-                <p>Smart in-car Q&A system</p>
+                <p class="project-description">Smart in-car Q&A system</p>
             </div>
             <div class="slide">
                 <strong>MobiDrop (Zhejiang) Co., Ltd., (Nov 2023 - May 2024):</strong>
-                <p>Pretraining scGPT on human blood scRNA-seq data</p>
-                <p>Research Mentor: Dr. Guan Tao Zheng</p>
+                <p class="project-description">Pretraining scGPT on human blood scRNA-seq data</p>
+                <p class="project-description">Research Mentor: Dr. Guan Tao Zheng</p>
             </div>
             <div class="slide">
                 <strong>Macau Polytechnic University, (Aug 2023):</strong>
-                <p>Adapting BERTopic for Topic Modeling in Mandarin Chinese</p>
-                <p>Research Mentor: Dr. Patrick Pang</p>
+                <p class="project-description">Adapting BERTopic for Topic Modeling in Mandarin Chinese</p>
+                <p class="project-description">Research Mentor: Dr. Patrick Pang</p>
             </div>
             <div class="slide">
                 <strong>Bank of China Macau Branch, (May - Jul 2023):</strong>
-                <p>Due diligence data organization with SQL</p>
+                <p class="project-description">Due diligence data organization with SQL</p>
             </div>
         </div>
         <div class="arrows">
@@ -212,26 +212,21 @@
     
         let currentIndex = 0;
     
-        // Set the width of the `.slides` container to accommodate all slides
         slides.style.width = `${slide.length * 100}%`;
     
-        // Ensure each `.slide` has the correct width
         slide.forEach(s => {
             s.style.width = `${100 / slide.length}%`;
         });
     
-        // Function to update the position of the slides
         function updateSlide() {
             slides.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
     
-        // Event listener for the previous button
         prev.addEventListener('click', () => {
             currentIndex = (currentIndex > 0) ? currentIndex - 1 : slide.length - 1;
             updateSlide();
         });
     
-        // Event listener for the next button
         next.addEventListener('click', () => {
             currentIndex = (currentIndex < slide.length - 1) ? currentIndex + 1 : 0;
             updateSlide();
