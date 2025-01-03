@@ -186,9 +186,13 @@
                 font-size: 1em;
                 max-width: 300px;
             }
-            strong {
-                font-size: 1.2em;
-                max-width: 300px;
+            .slide strong {
+                font-size: 1.2em; /* Adjust font size */
+                font-weight: bold; /* Reinforce boldness */
+                word-wrap: break-word; /* Ensure long text wraps */
+                overflow-wrap: break-word; /* Alternative for word wrapping */
+                text-align: left; /* Align text appropriately */
+                display: block; /* Ensure it behaves like a block for better wrapping */
             }
         }
     </style>    
