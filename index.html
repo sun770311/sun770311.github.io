@@ -1,300 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <style>
-        body {
-            font-family: Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom, #162447, #1f4068, #3b5998, #6fbfff);
-            color: #eaeaea;
-        }
-        .navbar {
-            background-color: transparent;
-            overflow: hidden;
-            border-bottom: 2px solid #162447;
-            padding: 10px 0;
-        }
-        .navbar a {
-            float: left;
-            display: block;
-            color: #eaeaea;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .navbar a:hover {
-            background-color: #162447;
-            color: #ffffff;
-        }
-        .navbar a.active {
-            color: #ffffff;
-        }
-        a {
-            color: #4fd1c5;
-            text-decoration: underline;
-        }
-        a:hover {
-            color: #81e6d9;
-            text-decoration: underline;
-        }
-        a:visited {
-            color: #4da3b7;
-        }
-        .content {
-            padding: 10px;
-            font-size: 12px;
-            max-width: 800px;
-            margin: 10px auto;
-            background-color: transparent;
-        }
-        h1 {
-            font-size: 2.5em;
-            font-weight: normal;
-            margin-top: 0;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            margin-bottom: 2px;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-        h2 {
-            font-size: 1.8em;
-            font-weight: bold;
-            margin-top: 2px;
-            margin-bottom: 2px;
-            color: #ffffff;
-        }
-        .slideshow {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: auto;
-            overflow: hidden;
-            padding: 0;
-            background-color: transparent;
-        }
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            will-change: transform;
-            position: relative;
-        }
-        .slide {
-            min-width: 100%;
-            height: auto;
-            box-sizing: border-box;
-            padding: 20px;
-            background-color: transparent;
-            position: relative;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            overflow: hidden;
-        }
-        .project-description {
-            font-size: 1.1em;
-            line-height: 1.5;
-            margin-bottom: 8px;
-            max-width: 750px;
-            color: #eaeaea;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-        .arrows {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-            pointer-events: none;
-        }
-        .arrow {
-            cursor: pointer;
-            background-color: rgba(0, 0, 0, 0.3);
-            color: #ffffff;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            pointer-events: all;
-            font-size: 1.2em;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
-        .arrow#prev {
-            left: 10px;
-        }
-        .arrow#next {
-            right: 10px;
-        }
-        .arrow:hover {
-            background-color: rgba(255, 255, 255, 0.5);
-            color: #000000;
-            opacity: 1;
-        }
-        .slide strong {
-            font-size: 1.4em;
-            font-weight: bold;
-            color: inherit;
-        }
-        .pdf-embed object {
-            width: 100%; 
-            max-width: 800px; 
-            height: 70vh; 
-            margin: auto;
-            display: block; 
-            box-sizing: border-box;
-        }
-
-        /* Media query for smaller screens */
-        @media (max-width: 768px) {
-            .pdf-embed object {
-                height: 50vh; 
-            }
-            .slideshow {
-                padding: 0;
-            }
-            .slides {
-                display: flex;
-                flex-wrap: nowrap;
-                width: 100%;
-            }
-            .slide {
-                width: 100%;
-                padding: 10px;
-                font-size: 0.9em; /* Adjust font size */
-            }
-            .slide strong {
-                max-width: 300px;
-                font-size: 1.1em;
-            }
-            .arrows {
-                top: auto;
-                bottom: 10px;
-            }
-            .arrow {
-                font-size: 1.5em;
-                padding: 5px 10px;
-            }
-            h2 {
-                font-size: 1.4em; /* Adjust section title font size */
-            } 
-            .project-description {
-                font-size: 1em;
-                max-width: 350px;
-            }
-        }
-    </style>    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yueran (Hannah) Sun</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #004080;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .contact {
+      margin-bottom: 20px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .job-title {
+      font-weight: bold;
+    }
+    .project-title {
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <div class="navbar">
-        <a class="active" href="index.html">Home</a>
-    </div>
-    <div class="content">
-        <h1>Hello, I'm Hannah Sun</h1>
-        <p>I'm an undergraduate student at the University of Michigan - Ann Arbor majoring in Data Science with a minor in Mathematics. I will be graduating in April 2025. Fun fact: I have lived in 5 countries!</p>
-        <p><a href="https://github.com/sun770311">GitHub</a> <a href="https://www.linkedin.com/in/hannah-sun-5441041b7/">LinkedIn</a></p>
-    </div>
-    <div class="content slideshow">
-        <h2>Current & Past Work</h2>
-        <div class="slides">
-            <div class="slide">
-                <strong>ProQuest-24</strong>
-                <br>
-                <strong><i>Jan - Dec 2024</i></strong>
-                <p class="project-description">Mentors: Sindhu Kutty, John Dillon, Dan Hepp</p>
-                <p class="project-description">Automated newspaper article segmentation on Detroit Free Press front pages. Classified text as title, byline, or body, and filtered out visual noise.
-                    Developed automated pipeline in Python leveraging GPT-4o, OpenCV, Gaussian mixture models, and XML data. Ran on 100 front pages at half the average cost of manual segmentation, ProQuest's current strategy.</p>
-                <p class="project-description"><a href="https://www.linkedin.com/in/hannah-sun-5441041b7/overlay/1735497967954/single-media-viewer/?profileId=ACoAADJiGgQBzghTjn4_YPk-Rt9lfH-Y1mxkbcc">Visual Output Examples and Evaluation Statistics</a></p>
-            </div> 
-            <div class="slide">
-                <strong>autobots</strong>
-                <br>
-                <strong><i>Jun - Sep 2024</i></strong>
-                <p class="project-description">Experimentation with AutoGen for PothoAI's agent chat function. Supports autonomous, sequential, and groupchat workflow.</p>
-                <p class="project-description"><a href="https://github.com/sun770311/autobots">Git Repo</a></p>
-                <p class="project-description"><a href="https://www.yeschat.ai/gpts-ZxX6UPTw-PothoAI-Assistant">PothoAI demo</a></p>
-            </div> 
-            <div class="slide">
-                <strong>FinSense</strong>
-                <br>
-                <strong><i>May - Jul 2024</i></strong>
-                <p class="project-description">Developed a financial recommendation system that dynamically selects and executes functions based on user query. Forecasted stock price using SARIMAX, automating data collection, parameter selection, and plot visualization. Retrieved news, earnings surprises, and basic financial metrics through Finnhub, Alpha Vantage, and Yahoo Finance APIs.</p>
-                <p class="project-description"><a href="https://github.com/sun770311/FinSense">Git Repo</a></p>
-            </div> 
-            <div class="slide">
-                <strong>Pretrain scGPT</strong>
-                <br>
-                <strong><i>Nov 2023 - May 2024</i></strong>
-                <p class="project-description">Pretrained scGPT on a dataset of 300,000 human blood cells sampled from CELLxGENE. Achieved 54% reduction in training error and 6% decrease in validation error for gene expression level prediction after 6 epochs. Mentored by Dr. Guan Tao Zheng, Bioinformatics Scientist at MobiDrop (Zhejiang) Co., Ltd.</p>
-                <p class="project-description"><a href="https://github.com/sun770311/scLLM-pretrain">Git Repo</a></p>
-            </div> 
-            <div class="slide">
-                <strong>U-M PBA Distribution</strong>
-                <br>
-                <strong><i>Feb - Apr 2023</i></strong>
-                <p class="project-description">Project to update The University of Michigan Planet Blue Ambassador database. MCommunity and Google Sheets APIs used to retrieve student credentials. Project report analyzes ambassador distribution by school and highlights potential areas for development to strengthen recruitment efforts.</p>
-                <p class="project-description"><a href="https://github.com/sun770311/planetblue">Git Repo</a></p>
-                <p class="project-description"><a href="https://www.linkedin.com/in/hannah-sun-5441041b7/details/projects/328554672/multiple-media-viewer/?profileId=ACoAADJiGgQBzghTjn4_YPk-Rt9lfH-Y1mxkbcc&treasuryMediaId=1735495342760">Project Report</a></p>
-            </div> 
-            <!-- add more project below-->
-        </div>
-        <div class="arrows">
-            <button class="arrow" id="prev">&#10094;</button>
-            <button class="arrow" id="next">&#10095;</button>
-        </div>
-    </div>
-    <div class="content pdf-embed">
-        <h2>Resume</h2>
-        <object 
-            data="Hannah%20Sun%20Resume%20(5).pdf" 
-            type="application/pdf" 
-            style="width: 100%; height: 70vh; background-color: transparent;">
-            <p>Your browser does not support PDFs. Please <a href="Hannah%20Sun%20Resume%20(5).pdf">download the PDF</a> to view it.</p>
-        </object>
-        <div style="text-align: center; margin-top: 10px;">
-            <a href="Hannah%20Sun%20Resume%20(5).pdf" download>
-                <button style="background-color: #4fd1c5; color: #ffffff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
-                    Download PDF
-                </button>
-            </a>
-        </div>
-    </div>    
+  <h1>Yueran (Hannah) Sun</h1>
 
-    <script>
-        const slides = document.querySelector('.slides');
-        const slide = document.querySelectorAll('.slide');
-        const prev = document.getElementById('prev');
-        const next = document.getElementById('next');
-    
-        let currentIndex = 0;
-    
-        slides.style.width = `${slide.length * 100}%`;
-    
-        slide.forEach(s => {
-            s.style.width = `${100 / slide.length}%`;
-        });
-    
-        function updateSlide() {
-            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-    
-        prev.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : slide.length - 1;
-            updateSlide();
-        });
-    
-        next.addEventListener('click', () => {
-            currentIndex = (currentIndex < slide.length - 1) ? currentIndex + 1 : 0;
-            updateSlide();
-        });
-    </script>    
+  <div class="contact">
+    <p>Email: <a href="mailto:hannahxsun0504@gmail.com">hannahxsun0504@gmail.com</a></p>
+    <p>Phone: +1 415-549-6332</p>
+    <p><a href="resume.pdf" target="_blank">View My Resume</a></p>
+  </div>
+
+  <div class="section">
+    <h2>About Me</h2>
+    <p>Hi, I am a current undergraduate student at The University of Michigan majoring in Data Science with a minor in Mathematics. I will be graduating in May 2025, where I will begin my master's studies at the University of Washington Seattle in their Master of Science in Data Science program.</p>
+  </div>
+
+  <div class="section">
+    <h2>Employment</h2>
+    <ul>
+      <li>
+        <span class="job-title">Mathematics Course Grader, MATH 417, University of Michigan</span><br/>
+        Assisted Professor Ruiyuan Chen in grading and feedback for Matrix Algebra I (MATH 417), covering topics such as eigenvalues, vector spaces, and linear transformations.
+      </li>
+      <li>
+        <span class="job-title">Communications Assistant, Office of the EVPCFO, University of Michigan</span><br/>
+        Drafted executive communications and helped populate the new Business & Finance Intranet under Director Bradley Whitehouse.
+      </li>
+      <li>
+        <span class="job-title">NLP Algorithm Intern, Pachira Information Technology (Hengqin) Co., Ltd., China</span><br/>
+        Developed an in-car AI voice assistant for Toyota vehicles in China (2025 release). Built response-handling functions and engineered LangChain prompts for RAG-based query processing.
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <span class="project-title">EECS 485: Web Systems – Instagram Clone</span><br/>
+        Built full-stack Instagram clone using React, AJAX, REST API, AWS EC2. Added dynamic features (likes, comments, infinite scroll), tested with Cypress.
+      </li>
+      <li>
+        <span class="project-title">EECS 493: UI Development – MoveIn Masters</span><br/>
+        Designed a Figma prototype to streamline U-M housing search. Features include comparing housing options, map view, and application submission.
+      </li>
+      <li>
+        <span class="project-title">EECS 487: NLP – Influencer Recommendation</span><br/>
+        Used SBERT + FAISS for influencer search and GPT-2 for content generation. Built a dual-model system for product-based influencer outreach.
+      </li>
+      <li>
+        <span class="project-title">ProQuest Capstone Project – Automated Newspaper Segmentation</span><br/>
+        Collaborated with mentors to develop a Python pipeline using GPT-4o, OpenCV, and GMM for text classification on newspaper front pages. Reduced manual costs by 50%. 
+        <a href="LINK_TO_LINKEDIN_POST" target="_blank">See visual examples</a>
+      </li>
+      <li>
+        <span class="project-title">EECS 484: Database Management Systems – Fakebook</span><br/>
+        Designed SQL and MongoDB pipelines for a fictional social media site. Used triggers, sequences, and JDBC queries to simulate user analytics.
+      </li>
+      <li>
+        <span class="project-title">MobiDrop – Single-cell LLM (Remote, Shanghai)</span><br/>
+        Designed a pre-training step for scGPT on 300k blood cells. Tokenized highly variable genes. Improved training/validation error by 54%/6%.
+      </li>
+      <li>
+        <span class="project-title">Bank of China, Macau Branch – IT Academic Exchange</span><br/>
+        Organized customer and remittance data. Designed SQL schemas for tracking transactions for the Due Diligence Reporting Project.
+      </li>
+    </ul>
+  </div>
 </body>
 </html>
