@@ -4,136 +4,313 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yueran (Hannah) Sun</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #111;
+      background-color: #f4f4f2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 100vh;
+    }
+
+    .left-panel {
+      width: 50%;
+      overflow: hidden;
+    }
+
+    .left-panel img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      display: block;
+    }
+
+    .right-panel {
+      width: 50%;
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #fff;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 12px;
+      color: #000;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 32px;
       line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
     }
-    h1, h2 {
+
+    .highlight-orange {
+      color: #cc5500;
+    }
+
+    .highlight-green {
+      color: #2e8b57;
+    }
+
+    .highlight-purple {
+      color: #6a0dad;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .buttons a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      background-color: #111;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background-color: #333;
+    }
+
+    .buttons i {
+      font-size: 18px;
+    }
+
+    #projects {
+      width: 100%;
+      padding: 60px 40px;
+      background-color: #fff;
+    }
+
+    #projects h2 {
+      font-size: 28px;
+      margin-bottom: 36px;
       color: #004080;
+      text-align: center;
     }
-    a {
+
+    /* Timeline styles */
+    .timeline {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+      padding-top: 40px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: #ccc;
+      z-index: 0;
+    }
+
+    .timeline-event {
+      flex: 1;
+      min-width: 150px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-event .icon {
+      background: var(--accent);
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      transform: translateY(-50%);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 2;
+    }
+
+    .timeline-event .label {
+      margin-top: 12px;
+      font-size: 15px;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    /* Projects list */
+    #projects ul {
+      max-width: 900px;
+      margin: 0 auto;
+      list-style: disc;
+      padding-left: 20px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    #projects ul a {
       color: #0066cc;
       text-decoration: none;
     }
-    a:hover {
+
+    #projects ul a:hover {
       text-decoration: underline;
     }
-    .contact {
-      margin-bottom: 20px;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .job-title {
-      font-weight: bold;
-    }
-    .project-title {
-      font-weight: bold;
+
+    @media (max-width: 768px) {
+      .top-section {
+        flex-direction: column;
+      }
+
+      .left-panel,
+      .right-panel {
+        width: 100%;
+      }
+
+      .left-panel img {
+        height: 50vh;
+      }
+
+      .right-panel {
+        padding: 30px 20px;
+      }
+
+      .timeline {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .timeline::before {
+        display: none;
+      }
+
+      .timeline-event {
+        margin-bottom: 30px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Yueran (Hannah) Sun</h1>
 
-  <div class="contact">
-    <p>Email: <a href="mailto:hannahxsun0504@gmail.com">hannahxsun0504@gmail.com</a></p>
-    <p>Phone: +1 415-549-6332</p>
-    <p><a href="resume.pdf" target="_blank">View My Resume</a></p>
-    <p><a href="https://www.linkedin.com/in/hannah-sun-5441041b7/" target="_blank">LinkedIn</a></p>
+  <div class="top-section">
+    <div class="left-panel">
+      <img src="IMG_3156.JPG" alt="Hannah" />
+    </div>
+
+    <div class="right-panel">
+      <h1>Yueran (Hannah) Sun</h1>
+      <p>
+        <span class="highlight-orange">What I just finished working on:</span> B.S. in DS at UMich
+        <br><br>
+        <span class="highlight-green">What I am working on:</span> Product Delivery at Ternary
+        <br><br>
+        <span class="highlight-purple">What I will be working on:</span> MSDS at UW
+      </p>
+
+      <div class="buttons">
+        <a href="mailto:hannahxsun0504@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/hannah-sun-5441041b7/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="#projects"><i class="fas fa-folder-open"></i> Projects & Experience</a>
+      </div>
+    </div>
   </div>
 
-  <div class="section">
-    <h2>About Me</h2>
-    <p>Hi, I am a current undergraduate student at The University of Michigan majoring in Data Science with a minor in Mathematics. I will be graduating in May 2025, where I will begin my master's studies at the University of Washington Seattle in their Master of Science in Data Science program.</p>
-  </div>
+  <section id="projects">
+    <h2>Projects & Experience</h2>
 
-  <div class="section">
-    <h2>Employment</h2>
+    <!-- Timeline -->
+    <div class="timeline">
+      <div class="timeline-event" style="--accent: #6a0dad;">
+        <div class="icon"><i class="fas fa-hourglass-start"></i></div>
+        <div class="label">
+          <strong>2023</strong><br>
+          Undergraduate Math Tutor<br>
+          <i class="fas fa-map-pin"></i> Ann Arbor, MI, USA
+        </div>
+      </div>
+
+      <div class="timeline-event" style="--accent: #f4a300;">
+        <div class="icon"><i class="fas fa-comment-dots"></i></div>
+        <div class="label">
+          <strong>2023-2025</strong><br>
+          EVPCFO Communications Assistant<br>
+          <i class="fas fa-map-pin"></i> Ann Arbor, MI, USA
+        </div>
+      </div>
+
+      <div class="timeline-event" style="--accent: #2ec4b6;">
+        <div class="icon"><i class="fas fa-language"></i></div>
+        <div class="label">
+          <strong>2024</strong><br>
+          NLP Algorithm Intern @ Pachira<br>
+          <i class="fas fa-map-pin"></i> Guangdong, China
+        </div>
+      </div>
+
+      <div class="timeline-event" style="--accent: #00b4d8;">
+        <div class="icon"><i class="fas fa-book"></i></div>
+        <div class="label">
+          <strong>2025</strong><br>
+          Matrix Algebra Course Grader<br>
+          <i class="fas fa-map-pin"></i> Ann Arbor, MI, USA
+        </div>
+      </div>
+
+      <div class="timeline-event" style="--accent: #0077b6;">
+        <div class="icon"><i class="fas fa-laptop-code"></i></div>
+        <div class="label">
+          <strong>2025</strong><br>
+          Product Delivery Intern @ Ternary<br>
+          <i class="fas fa-map-pin"></i> Delray Beach, FL, USA
+        </div>
+      </div>
+    </div>
+
+    <!-- Project List -->
     <ul>
-      <li>
-        <span class="job-title">Mathematics Course Grader, University of Michigan, Jan 2025 - April 2025</span><br/>
-        Assisted Professor Ruiyuan Chen in grading and feedback for MATH 417 - Matrix Algebra I, covering topics such as eigenvalues, vector spaces, and linear transformations.
-      </li>
-      <li>
-        <span class="job-title">Communications Assistant, U-M Office of the EVPCFO, Sep 2023 - April 2025</span><br/>
-        Drafted communications material for EVPCFO Geoff Chatas and helped populate the new Business & Finance Intranet. Supervisor: Director of Executive Communications Bradley Whitehouse.
-      </li>
-      <li>
-        <span class="job-title">NLP Algorithm Intern, Pachira Information Technology (Hengqin) Co., Ltd., May 2024 - Aug 2024</span><br/>
-        Developed an in-car AI voice assistant for Toyota vehicles in China (2025 release). Built response-handling functions and engineered LangChain prompts for RAG-based query processing.
-      </li>
-    </ul>
-  </div>
+      <li><strong>ProQuest - Enhancing Historical Newspaper Analysis through NLP:</strong> Decided to do this instead of a capstone course. Used CV, GMMs, and LLMs + XML characteristics to automate the segmentation of historical Detroit Free Press front pages. Instead of page-level info, we now have individual articles! Made pretty color-coded newspaper images. <a href="https://www.linkedin.com/in/hannah-sun-5441041b7/overlay/1735497967954/single-media-viewer/?profileId=ACoAADJiGgQBzghTjn4_YPk-Rt9lfH-Y1mxkbcc" target="_blank">Sample Outputs</a></li>
+    
+      <li><strong>NLP Algorithm Intern @ Pachira:</strong> Enhanced RAG pipeline in a Toyota in-car AI assistant. Added the ability to answer queries related to dashboard warning lights. Played around with query translation and multi-intent recognition. Favorite character setting for the voice assistant was K-drama CEO.</li>
+    
+      <li><strong>Distributed Web Search Engine (EECS 485 @ UMich)</strong> Built a TF-IDF and PageRank-based search engine using a fault-tolerant MapReduce framework. Balanced search relevance with throughput via parallel optimization.</li>
+    
+      <li><strong>InstaAIModel (EECS 487 @ UMich):</strong> Fine-tuned LLaMA-3.1, Qwen2.5, and Mistral models on 1.6M Instagram posts to generate authentic posts. Matched influencers to generated content using SBERT + FAISS. Won best presentation :D <a href="https://github.com/sun770311/FinSense" target="_blank">Github</a></li>
+    
+      <li><strong>Fakebook Database (EECS 484 @ UMich):</strong> Designed relational schema for a fictional social platform, optimized JDBC queries, and used MongoDB aggregation pipelines to create user engagement reports. Not to be confused with Facebook.</li>
+    
+      <li><strong>Pretraining scGPT @ MobiDrop:</strong> Designed pretraining for scGPT on 300K human blood cells. Goal was to predict gene expression levels in single-cell RNA sequences. Over 6 epochs, reduced training/validation error by 54%/6%. <a href="https://github.com/sun770311/scLLM-pretrain" target="_blank">Github</a></li>
+    </ul>       
+  </section>
 
-  <div class="section">
-    <h2>Projects</h2>
-    <h4>For course projects, please contact me for more information.</h4>
-    <ul>
-      <li>
-        <span class="project-title">EECS 485: Web Systems (Course Project)</span><br/>
-        <p>Built full-stack Instagram clone using React, AJAX, REST API, AWS EC2. Added dynamic features (likes, comments, infinite scroll), tested with Cypress.</p>
-
-        <p>Designed and implemented a distributed MapReduce system using TCP and UDP socket programming to coordinate multiple worker nodes through a central manager, supporting parallel processing of large text datasets.</p>
-      </li>
-      <li>
-        <span class="project-title">EECS 493: UI Development (Course Project)</span><br/>
-        <p>Designed a Figma prototype to streamline U-M housing search. Features include comparing housing options, map view, and application submission.</p>
-      </li>
-      <li>
-        <span class="project-title">EECS 487: Intro to NLP (Course Project)</span><br/>
-        <p>Developed a dual-model system for automated product advertisement and influencer matching. Trained GPT-2 to generate promotional content based on product descriptions, and used SBERT embeddings with FAISS for semantic search to identify influencers whose profiles align with the generated posts.</p>
-      </li>
-      <li>
-        <span class="project-title">Capstone Project: ProQuest-24 Automated Newspaper Segmentation</span><br/>
-        <p>Automated textual and spatial segmentation of Detroit Free Press newspaper front pages into individual articles. Reduced costs by 50% compared to manual segmentation.</p>
-        <a href="https://www.linkedin.com/in/hannah-sun-5441041b7/overlay/1735497967954/single-media-viewer/?profileId=ACoAADJiGgQBzghTjn4_YPk-Rt9lfH-Y1mxkbcc" target="_blank">See visual output examples</a>
-      </li>
-      <li>
-        <span class="project-title">EECS 484: Database Management Systems (Course Project)</span><br/>
-        <p>Designed SQL and MongoDB pipelines for Fakebook, a fictional social media site. Used triggers, sequences, and JDBC queries to simulate user analytics.</p>
-      </li>
-      <li>
-        <span class="project-title">autobots</span><br/>
-        <p>Experimentation with AutoGen for PothoAI's agent chat function. Supports autonomous, sequential, and groupchat workflow.</p>
-
-        <p><a href="https://github.com/sun770311/autobots" target="_blank">Github</a></p>
-      </li>
-      <li>
-        <span class="project-title">FinSense</span><br/>
-        <p>Developed a financial recommendation system that dynamically selects and executes functions based on user query. Forecasted stock price using SARIMAX, automating data collection, parameter selection, and plot visualization. Retrieved news, earnings surprises, and basic financial metrics through Finnhub, Alpha Vantage, and Yahoo Finance APIs.</p>
-
-        <p><a href="https://github.com/sun770311/FinSense" target="_blank">Github</a></p>
-      </li>
-      <li>
-        <span class="project-title">Single-cell LLM, MobiDrop (Zhejiang) Co., Ltd.</span><br/>
-        <p>Designed a pre-training step for scGPT on 300k blood cells. Tokenized highly variable genes. Improved training/validation error by 54%/6%.</p>
-        
-        <p><a href="https://github.com/sun770311/scLLM-pretrain" target="_blank">Github</a></p>
-      </li>
-      <li>
-        <span class="project-title">Information Technology Extern, Bank of China Macau Brach</span><br/>
-        <p>Organized customer and remittance data. Designed SQL schemas for tracking transactions for the Due Diligence Reporting Project.</p>
-      </li>
-      <li>
-        <span class="project-title">Planet Blue Ambassador Distribution</span><br/>
-        <p>Updated The University of Michigan Planet Blue Ambassador database. MCommunity and Google Sheets APIs used to retrieve student credentials. Project report analyzes ambassador distribution by school and highlights potential areas for development to strengthen recruitment efforts.</p>
-        
-        <p><a href="https://github.com/sun770311/planetblue" target="_blank">Github</a></p>
-        <p><a href="https://www.linkedin.com/in/hannah-sun-5441041b7/details/projects/328554672/multiple-media-viewer/?profileId=ACoAADJiGgQBzghTjn4_YPk-Rt9lfH-Y1mxkbcc&treasuryMediaId=1735495342760" target="_blank">Link to Report</a></p>
-      </li>
-    </ul>
-  </div>
 </body>
 </html>
