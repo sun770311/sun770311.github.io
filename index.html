@@ -19,298 +19,293 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: #111;
       background-color: #f4f4f2;
-      display: flex;
-      flex-direction: column;
+      line-height: 1.6;
     }
 
-    .top-section {
-      display: flex;
-      flex-wrap: wrap;
+    .hero-section {
       min-height: 100vh;
-    }
-
-    .left-panel {
-      width: 50%;
-      overflow: hidden;
-    }
-
-    .left-panel img {
-      width: 100%;
-      height: 100vh;
-      object-fit: cover;
-      display: block;
-    }
-
-    .right-panel {
-      width: 50%;
-      padding: 60px 40px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 40px;
       background-color: #fff;
     }
 
     h1 {
-      font-size: 36px;
-      margin-bottom: 12px;
+      font-size: 48px;
+      margin-bottom: 40px;
       color: #000;
+      font-weight: 700;
     }
 
-    p {
-      font-size: 18px;
-      margin-bottom: 32px;
-      line-height: 1.6;
+    .intro-text {
+      font-size: 24px;
+      margin-bottom: 50px;
+      max-width: 800px;
     }
 
     .highlight-orange {
       color: #cc5500;
+      font-weight: 600;
     }
 
     .highlight-green {
       color: #2e8b57;
+      font-weight: 600;
     }
 
     .highlight-purple {
       color: #6a0dad;
+      font-weight: 600;
     }
 
     .buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 20px;
+      justify-content: center;
     }
 
     .buttons a {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 12px 18px;
+      gap: 10px;
+      padding: 16px 24px;
       background-color: #111;
       color: #fff;
       text-decoration: none;
-      border-radius: 6px;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .buttons a:hover {
       background-color: #333;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
     .buttons i {
-      font-size: 18px;
+      font-size: 20px;
     }
 
-    #projects {
-      width: 100%;
-      padding: 60px 40px;
-      background-color: #fff;
-    }
-
-    #projects h2 {
-      font-size: 28px;
-      margin-bottom: 36px;
-      color: #004080;
+    .scroll-down {
+      margin-top: 40px;
       text-align: center;
     }
 
-    /* Timeline styles */
-    .timeline {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      position: relative;
-      max-width: 1000px;
-      margin: 0 auto 60px;
-      padding-top: 40px;
-    }
-
-    .timeline::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: #ccc;
-      z-index: 0;
-    }
-
-    .timeline-event {
-      flex: 1;
-      min-width: 150px;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .timeline-event .icon {
-      background: var(--accent);
-      color: #fff;
-      width: 60px;
-      height: 60px;
+    .scroll-down button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 16px;
       border-radius: 50%;
+      transition: all 0.3s ease;
+      color: #666;
       font-size: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      transform: translateY(-50%);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      position: relative;
-      z-index: 2;
     }
 
-    .timeline-event .label {
-      margin-top: 12px;
-      font-size: 15px;
-      color: #333;
-      line-height: 1.4;
+    .scroll-down button:hover {
+      color: #004080;
+      transform: translateY(4px);
     }
 
-    /* Projects list */
-    #projects ul {
-      max-width: 900px;
+    .video-section {
+      padding: 80px 40px;
+      background-color: #f8f9fa;
+    }
+
+    .video-container {
+      max-width: 1200px;
       margin: 0 auto;
-      list-style: disc;
-      padding-left: 20px;
+      text-align: center;
+    }
+
+    .video-title {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #004080;
+      font-weight: 700;
+    }
+
+    .video-description {
       font-size: 18px;
-      line-height: 1.8;
+      margin-bottom: 40px;
+      color: #555;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    #projects ul a {
-      color: #0066cc;
-      text-decoration: none;
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     }
 
-    #projects ul a:hover {
-      text-decoration: underline;
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .work-description {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .work-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #004080;
+      margin-bottom: 8px;
+    }
+
+    .work-company {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .work-duration {
+      font-size: 16px;
+      color: #888;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .work-bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    .work-bullets li {
+      padding: 8px 0;
+      position: relative;
+      padding-left: 24px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .work-bullets li::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      color: #004080;
+      font-weight: bold;
     }
 
     @media (max-width: 768px) {
-      .top-section {
-        flex-direction: column;
+      .hero-section {
+        padding: 40px 20px;
       }
 
-      .left-panel,
-      .right-panel {
-        width: 100%;
+      h1 {
+        font-size: 36px;
       }
 
-      .left-panel img {
-        height: 50vh;
+      .intro-text {
+        font-size: 20px;
       }
 
-      .right-panel {
-        padding: 30px 20px;
-      }
-
-      .timeline {
+      .buttons {
         flex-direction: column;
         align-items: center;
       }
 
-      .timeline::before {
-        display: none;
+      .video-section {
+        padding: 60px 20px;
       }
 
-      .timeline-event {
-        margin-bottom: 30px;
+      .video-title {
+        font-size: 28px;
+      }
+
+      .work-description {
+        padding: 30px 20px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="top-section">
-    <div class="left-panel">
-      <img src="IMG_3156.JPG" alt="Hannah" />
-    </div>
-
-    <div class="right-panel">
-      <h1>Yueran (Hannah) Sun</h1>
+  <div class="hero-section">
+    <h1>Yueran (Hannah) Sun</h1>
+    
+    <div class="intro-text">
       <p>
-        <span class="highlight-orange">What I just finished working on:</span> B.S. in DS at UMich
-        <br><br>
-        <span class="highlight-green">What I am working on:</span> Product Delivery at Ternary
-        <br><br>
+        <span class="highlight-orange">What I just finished working on:</span> SWE Internship at Ternary
+      </p>
+      <br>
+      <p>
+        <span class="highlight-green">What I am working on:</span> Running everyday and exploring Seattle
+      </p>
+      <br>
+      <p>
         <span class="highlight-purple">What I will be working on:</span> MSDS at UW
       </p>
+    </div>
 
-      <div class="buttons">
-        <a href="mailto:hannahxsun0504@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-        <a href="https://www.linkedin.com/in/hannah-sun-5441041b7/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="#projects"><i class="fas fa-folder-open"></i> Projects & Experience</a>
-      </div>
+    <div class="buttons">
+      <a href="mailto:yuerans@uw.edu"><i class="fas fa-envelope"></i> Email</a>
+      <a href="#"><i class="fas fa-file-alt"></i> Resume</a>
+      <a href="https://www.linkedin.com/in/hannah-sun-5441041b7/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+
+    <div class="scroll-down">
+      <button onclick="scrollToVideo()" aria-label="Scroll to video">
+        <i class="fas fa-chevron-down"></i>
+      </button>
     </div>
   </div>
 
-  <section id="projects">
-    <h2>Projects & Experience</h2>
-
-    <!-- Timeline -->
-    <div class="timeline">
-      <div class="timeline-event" style="--accent: #6a0dad;">
-        <div class="icon"><i class="fas fa-hourglass-start"></i></div>
-        <div class="label">
-          <strong>2023</strong><br>
-          Undergraduate Math Tutor<br>
-          <i class="fas fa-map-pin"></i> Ann Arbor, MI, USA
-        </div>
+  <section class="video-section">
+    <div class="video-container">
+      <h2 class="video-title">This is what I worked on:</h2>
+      <p class="video-description">A demonstration of the Prophet forecasting integration I developed during my internship at Ternary.</p>
+      
+      <div class="video-wrapper">
+        <video controls>
+          <source src="Prophet_Demo.MOV" type="video/quicktime">
+          Your browser does not support the video tag.
+        </video>
       </div>
 
-      <div class="timeline-event" style="--accent: #f4a300;">
-        <div class="icon"><i class="fas fa-comment-dots"></i></div>
-        <div class="label">
-          <strong>2023-2025</strong><br>
-          EVPCFO Communications Assistant<br>
-          <i class="fas fa-map-pin"></i> Ann Arbor, MI, USA
-        </div>
-      </div>
-
-      <div class="timeline-event" style="--accent: #2ec4b6;">
-        <div class="icon"><i class="fas fa-language"></i></div>
-        <div class="label">
-          <strong>2024</strong><br>
-          NLP Algorithm Intern @ Pachira<br>
-          <i class="fas fa-map-pin"></i> Guangdong, China
-        </div>
-      </div>
-
-      <div class="timeline-event" style="--accent: #00b4d8;">
-        <div class="icon"><i class="fas fa-book"></i></div>
-        <div class="label">
-          <strong>2025</strong><br>
-          Matrix Algebra Course Grader<br>
-          <i class="fas fa-map-pin"></i> Ann Arbor, MI, USA
-        </div>
-      </div>
-
-      <div class="timeline-event" style="--accent: #0077b6;">
-        <div class="icon"><i class="fas fa-laptop-code"></i></div>
-        <div class="label">
-          <strong>2025</strong><br>
-          Product Delivery Intern @ Ternary<br>
-          <i class="fas fa-map-pin"></i> Delray Beach, FL, USA
-        </div>
+      <div class="work-description">
+        <h3 class="work-title">Software Engineer Intern</h3>
+        <p class="work-company">Ternary</p>
+        <p class="work-duration">Jun 2025 – Aug 2025 | Seattle, WA (Remote)</p>
+        <ul class="work-bullets">
+          <li>Integrated Meta Prophet into the forecasting API, enabling daily and weekly cloud cost predictions</li>
+          <li>Developed cross-validation, hyperparameter tuning, and confidence interval support to improve forecast accuracy</li>
+          <li>Built backend workflows bridging Go and Python, with schema validation tests and Terraform deployments</li>
+          <li>Enhanced the UI with a moving slideshow of interactive line graphs for the top five costliest business dimensions</li>
+        </ul>
       </div>
     </div>
-
-    <!-- Project List -->
-    <ul>
-      <li><strong>ProQuest - Enhancing Historical Newspaper Analysis through NLP:</strong> Decided to do this instead of a capstone course. Used CV, GMMs, and LLMs + XML characteristics to automate the segmentation of historical Detroit Free Press front pages. Instead of page-level info, we now have individual articles! Made pretty color-coded newspaper images. <a href="https://www.linkedin.com/in/hannah-sun-5441041b7/overlay/1735497967954/single-media-viewer/?profileId=ACoAADJiGgQBzghTjn4_YPk-Rt9lfH-Y1mxkbcc" target="_blank">Sample Outputs</a></li>
-    
-      <li><strong>NLP Algorithm Intern @ Pachira:</strong> Enhanced RAG pipeline in a Toyota in-car AI assistant. Added the ability to answer queries related to dashboard warning lights. Played around with query translation and multi-intent recognition. Favorite character setting for the voice assistant was K-drama CEO.</li>
-    
-      <li><strong>Distributed Web Search Engine (EECS 485 @ UMich)</strong> Built a TF-IDF and PageRank-based search engine using a fault-tolerant MapReduce framework. Balanced search relevance with throughput via parallel optimization.</li>
-    
-      <li><strong>InstaAIModel (EECS 487 @ UMich):</strong> Fine-tuned LLaMA-3.1, Qwen2.5, and Mistral models on 1.6M Instagram posts to generate authentic posts. Matched influencers to generated content using SBERT + FAISS. Won best presentation :D <a href="https://github.com/hjjyhj/InstaAIModel" target="_blank">Github</a></li>
-    
-      <li><strong>Fakebook Database (EECS 484 @ UMich):</strong> Designed relational schema for a fictional social platform, optimized JDBC queries, and used MongoDB aggregation pipelines to create user engagement reports. Not to be confused with Facebook.</li>
-    
-      <li><strong>Pretraining scGPT @ MobiDrop:</strong> Designed pretraining for scGPT on 300K human blood cells. Goal was to predict gene expression levels in single-cell RNA sequences. Over 6 epochs, reduced training/validation error by 54%/6%. <a href="https://github.com/sun770311/scLLM-pretrain" target="_blank">Github</a></li>
-    </ul>       
   </section>
+
+  <script>
+    function scrollToVideo() {
+      document.querySelector('.video-section').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  </script>
 
 </body>
 </html>
