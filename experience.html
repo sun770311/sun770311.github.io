@@ -1,0 +1,215 @@
+<!-- experience.html (updated) -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Industry Experience — Yueran (Hannah) Sun" />
+  <title>Industry · Yueran (Hannah) Sun</title>
+
+  <style>
+    :root{
+      --bg:#0b0f16; --card:#0f1624; --card2:#111b2d;
+      --muted:#9aa7bd; --text:#e6edf7; --line:rgba(148,163,184,.18);
+      --shadow:0 10px 30px rgba(0,0,0,.35); --radius:16px; --max:980px;
+
+      --blue:#61afef; --cyan:#56b6c2; --green:#98c379; --orange:#e5c07b; --purple:#c678dd;
+      --link:var(--blue);
+
+      --h1: clamp(28px, 3.8vw, 38px);
+      --h2: clamp(18px, 2.1vw, 22px);
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#ffffff; --card:#f8fafc; --card2:#f1f5f9;
+        --muted:#475569; --text:#0f172a; --line:rgba(2,6,23,.12);
+        --shadow:0 10px 30px rgba(2,6,23,.08);
+        --blue:#2563eb; --cyan:#0891b2; --green:#16a34a; --orange:#b45309; --purple:#7c3aed;
+        --link:var(--blue);
+      }
+    }
+
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:
+        radial-gradient(1000px 520px at 10% -10%, color-mix(in srgb, var(--cyan) 14%, transparent), transparent 55%),
+        radial-gradient(900px 520px at 92% -5%,  color-mix(in srgb, var(--orange) 14%, transparent), transparent 55%),
+        var(--bg);
+      color:var(--text); line-height:1.6;
+    }
+    a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:22px 16px 64px}
+    @media(min-width:720px){ .wrap{padding:28px 18px 64px} }
+
+    .topbar{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:color-mix(in srgb,var(--bg) 86%,transparent);border-bottom:1px solid var(--line)}
+    .topbar .wrap{padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    @media(min-width:720px){ .topbar .wrap{padding:14px 18px;} }
+
+    .brand{display:flex;flex-direction:column;gap:2px}
+    .brand .name{
+    font-size:20px;   
+    font-weight:850;
+    letter-spacing:0.2px;
+    color: color-mix(in srgb, var(--cyan) 70%, var(--text));
+    }
+    .brand .tag{color:var(--muted);font-size:14px}
+
+    nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+    nav a{font-size:14px;color: color-mix(in srgb, var(--text) 92%, var(--muted));padding:8px 10px;border-radius:10px;border:1px solid transparent}
+    nav a:hover{border-color: color-mix(in srgb, var(--blue) 35%, var(--line));background: color-mix(in srgb, var(--card2) 55%, transparent);text-decoration:none}
+
+    .card{
+      background: linear-gradient(180deg,
+        color-mix(in srgb, var(--card) 92%, transparent),
+        color-mix(in srgb, var(--card2) 70%, transparent)
+      );
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:16px;
+      margin-top:14px
+    }
+
+    h1{margin:6px 0 0;font-size:var(--h1);letter-spacing:-.6px}
+    h2{margin:0 0 10px;font-size:var(--h2);letter-spacing:-.2px;color: color-mix(in srgb, var(--cyan) 70%, var(--text))}
+    .small{color:var(--muted);font-size:13px}
+
+    .item{padding:12px 0;border-top:1px solid var(--line)}
+    .item:first-of-type{border-top:none;padding-top:0}
+
+    .role{font-weight:820;color: color-mix(in srgb, var(--purple) 70%, var(--text))}
+    .meta{color:var(--muted);font-size:14px;margin-top:2px}
+    .meta .date{color: color-mix(in srgb, var(--orange) 70%, var(--muted));font-weight:650}
+
+    ul{margin:10px 0 0 18px;padding:0} li{margin:6px 0}
+
+    .pdfwrap{margin-top:12px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background: color-mix(in srgb, var(--card2) 65%, transparent)}
+    embed{width:100%;height:min(70vh, 640px);background:var(--card)}
+
+    .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid color-mix(in srgb, var(--blue) 20%, var(--line));
+      background: color-mix(in srgb, var(--card) 92%, transparent);
+      box-shadow: var(--shadow);
+      color:var(--text);
+      font-size:14px;
+      text-decoration:none;
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .btn:hover{
+      text-decoration:none;
+      transform: translateY(-1px);
+      border-color: color-mix(in srgb, var(--blue) 55%, var(--line));
+      background: color-mix(in srgb, var(--card2) 75%, transparent);
+    }
+
+    code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size:.95em;
+      color: color-mix(in srgb, var(--cyan) 65%, var(--text));
+      background: color-mix(in srgb, var(--card2) 78%, transparent);
+      border:1px solid var(--line);
+      padding:.12em .4em;
+      border-radius:8px;
+      white-space:nowrap;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">
+        <div class="name">Industry Experience</div>
+        <div class="tag">Yueran (Hannah) Sun</div>
+      </div>
+      <nav>
+        <a href="./">Home</a>
+        <a href="./research.html">Research</a>
+        <a href="Yueran%20Sun%20CV%20-%20Feb%2026%202026.pdf" target="_blank" rel="noopener">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="card">
+      <h2>Develop for Good · PainUSA</h2>
+      <div class="item">
+        <div class="role">Product Manager</div>
+        <div class="meta"><span class="date">Oct 2025 – Feb 2026</span> · Remote (Seattle, WA)</div>
+  
+        <div class="cta-row" aria-label="PainUSA links">
+          <a class="btn" href="https://pain-usa.webflow.io/" target="_blank" rel="noopener">View PainUSA site</a>
+        </div>
+  
+        <ul>
+          <li>Led a team of five undergraduate students to design and deliver the PainUSA non-profit website, coordinating milestones, delegating technical tasks, and aligning design and client requirements.</li>
+          <li>Guided user interface prototyping in Figma and implementation of the public website in Webflow.</li>
+          <li>Engineered and deployed a Mapbox-based interactive clinician lookup map, leveraging Cloudflare R2 for data storage and hosting, and embedded HubSpot forms for newsletter sign-up.</li>
+          <li>Managed client communication with Stanford Division of Pain Medicine leadership, producing structured handoff documentation to ensure sustainable post-delivery ownership.</li>
+        </ul>
+  
+      </div>
+    </section>
+  
+    <section class="card">
+      <h2>Ternary</h2>
+      <div class="item">
+        <div class="role">Software Engineer Intern (Product Delivery)</div>
+        <div class="meta"><span class="date">Jun 2025 – Aug 2025</span> · Remote (Seattle, WA)</div>
+        <ul>
+          <li>Upgraded Ternary’s cloud cost forecasting API by integrating Meta Prophet, enabling automated daily and weekly client spend predictions and improving modeling sophistication beyond the prior linear regression baseline.</li>
+          <li>Improved forecast reliability through time-series cross-validation, hyperparameter tuning, and confidence interval integration.</li>
+          <li>Engineered backend workflows connecting Go and Python services, implementing schema-validation tests and CI pipelines to ensure forecasting accuracy and production stability.</li>
+          <li>Deployed and maintained staging environments on Google Cloud, using Terraform to provision and manage shared resources and support pre-production UI testing.</li>
+          <li>Enhanced the frontend user interface with a rotating slideshow of interactive line charts, visualizing top cost-contributing business dimensions.</li>
+        </ul>
+      </div>
+    </section>
+  
+    <section class="card" id="proquest">
+      <h2>University of Michigan · Multidisciplinary Design Program (ProQuest)</h2>
+      <div class="item">
+        <div class="role">Student Developer</div>
+        <div class="meta"><span class="date">Jan 2024 – Dec 2024</span> · Ann Arbor, MI</div>
+        <ul>
+          <li>Automated textual and layout segmentation of historical Detroit Free Press front pages, extracting article-level structure such as titles, bylines, body text, and reading order from JP2 images and OCR data.</li>
+          <li>Developed an MLOps pipeline integrating large language models, Gaussian mixture models, and computer vision for text-type classification, article boundary detection, and noise labeling.</li>
+          <li>Validated segmentation and classification performance through controlled A/B testing, comparing pipeline variants to optimize accuracy, robustness, and processing efficiency.</li>
+          <li>Reduced segmentation cost by 50% compared to manual labeling while increasing throughput to 12 pages per minute.</li>
+        </ul>
+  
+        <div class="pdfwrap" aria-label="Embedded ProQuest PDF">
+          <embed src="ProQuest MDP 2024 Final Report.pdf" type="application/pdf" />
+        </div>
+  
+        <p class="small" style="margin:10px 0 0;">
+          If the embed doesn’t display on some browsers, the file can still be downloaded:
+          <a href="ProQuest MDP 2024 Final Report.pdf" target="_blank" rel="noopener">Open PDF in a new tab</a>.
+        </p>
+      </div>
+    </section>
+  
+    <section class="card">
+      <h2>Pachira Information Technology (Hengqin) Co., Ltd</h2>
+      <div class="item">
+        <div class="role">NLP Algorithm Intern</div>
+        <div class="meta"><span class="date">May 2024 – Aug 2024</span> · Zhuhai, China</div>
+        <ul>
+          <li>Enhanced the retrieval augmented generation pipeline powering an in-car voice assistant for Toyota vehicles.</li>
+          <li>Developed a new warning-light query handling module and deployed multiple system iterations through vehicle simulator testing.</li>
+          <li>Implemented multi-intent recognition, refusal logic, and query translation components to improve accuracy, safety, and user interaction quality.</li>
+        </ul>
+      </div>
+    </section>
+  
+  </main>
+</body>
+</html>
