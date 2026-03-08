@@ -119,7 +119,7 @@
     h1{font-size:var(--h1); line-height:1.12; margin:10px 0 8px; letter-spacing:-.7px}
     h2{margin:0 0 10px; font-size:var(--h2); letter-spacing:-.2px}
 
-    .subtitle{color:var(--muted); font-size:16px; max-width:76ch}
+    .subtitle{color:var(--muted); font-size:16px; max-width:90ch}
 
     .cta-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
     .btn{
@@ -192,6 +192,18 @@
 
     .split{display:grid; grid-template-columns:1fr; gap:14px}
     @media(min-width:900px){ .split{grid-template-columns: 1.05fr .95fr;} }
+
+    .update{
+      margin-top:10px;
+      padding:8px 12px;
+      border-radius:10px;
+      border:1px solid color-mix(in srgb, var(--blue) 40%, var(--line));
+      background: color-mix(in srgb, var(--blue) 12%, transparent);
+      font-size:15px;
+    }
+    .update strong{
+      color:var(--blue);
+    }
   </style>
 </head>
 
@@ -206,7 +218,7 @@
         <a href="./">Home</a>
         <a href="./research.html">Research</a>
         <a href="./experience.html">Industry</a>
-        <a href="Yueran%20Sun%20CV%20-%20Feb%2026%202026.pdf" target="_blank" rel="noopener">CV</a>
+        <a href="Sun-Curriculum Vitae.pdf" target="_blank" rel="noopener">CV</a>
       </nav>
     </div>
   </header>
@@ -215,16 +227,21 @@
     <section class="card">
       <h1>Hi👋 I’m Hannah.</h1>
       <p class="subtitle">
-        I’m a Master’s student in Data Science at the University of Washington (Seattle).
-        I work on <span class="k">computing cultural heritage</span> (large-scale image reuse analysis) and
-        <span class="g">language accessibility</span> (alignment + evaluation for plain-language transformations).
+        I’m a Master’s student in Data Science at the University of Washington.
+        My research explores how computing can help us better understand cultural heritage and make information more accessible through language.
+      </p>
+      
+      <p class="update">
+        <strong>Update:</strong> My co-authored paper, 
+        <em>Beyond Readability Metrics: Plain Language Priorities in Disability Advocacy Organizations</em>, 
+        has been accepted to ACM FAccT 2026!
       </p>
 
       <div class="cta-row" aria-label="Quick links">
         <a class="btn" href="mailto:yuerans@uw.edu">Email</a>
         <a class="btn" href="https://www.linkedin.com/in/yueran-hannah-sun-5441041b7/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/sun770311" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="Yueran%20Sun%20CV%20-%20Feb%2026%202026.pdf" target="_blank" rel="noopener">Download CV</a>
+        <a class="btn" href="Sun-Curriculum Vitae.pdf" target="_blank" rel="noopener">Download CV</a>
       </div>
     </section>
 
@@ -249,7 +266,7 @@
 
       <div class="item">
         <div class="role">Beyond Readability Metrics: Plain Language Priorities in Disability Advocacy Organizations</div>
-        <div class="meta"><span class="date">Under review</span> (ACM FAccT 2026)</div>
+        <div class="meta"><span class="date">Accepted</span> (ACM FAccT 2026)</div>
       </div>
 
       <div class="item">
