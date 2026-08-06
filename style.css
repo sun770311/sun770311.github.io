@@ -161,3 +161,30 @@ hr {
 .navbar a:hover {
     color: #0055cc;
 }
+
+.publication {
+    margin-bottom: 2rem;
+}
+
+.pub-authors {
+    margin-bottom: 0.3rem;
+    color: #444;
+}
+
+.pub-title {
+    margin-bottom: 0.3rem;
+    font-size: 1.05rem;
+}
+
+.pub-title a {
+    color: #222;
+    text-decoration: none;
+}
+
+.pub-title a:hover {
+    text-decoration: underline;
+}
+
+.pub-venue {
+    color: #666;
+}
