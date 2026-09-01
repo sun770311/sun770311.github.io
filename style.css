@@ -85,6 +85,11 @@ section h2 {
     font-size: 2rem;
 }
 
+section h3 {
+    margin-bottom: 20px;
+    font-size: 1.65rem;
+}
+
 section p {
     color: #444;
 }
